@@ -8,11 +8,32 @@
 import SwiftUI
 
 struct Tabs: View {
+    var job: Job
+    var category: Category
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            Dashboard(job: job)
+                        .tabItem {
+                            Label("Home", systemImage: "house.fill")
+                        }
+                    
+                    Categories(category: category)
+                        .tabItem {
+                            Label("Categories", systemImage: "square.grid.2x2.fill")
+                        }
+                    
+                    ActiveHustles()
+                        .tabItem {
+                            Label("Active Jobs", systemImage: "list.bullet.clipboard.fill")
+                        }
+                }
     }
 }
 
 #Preview {
-    Tabs()
+    Tabs(job: Job(title: "Walk dog", description: "", price: 20, status:"Available", location: "Byo"), category:  Category(
+        image: Image(systemName: "figure.and.child.holdinghands"),
+        title: "Children"
+    ))
 }

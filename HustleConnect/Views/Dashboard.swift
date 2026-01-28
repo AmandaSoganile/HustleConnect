@@ -8,34 +8,7 @@
 import SwiftUI
 
 struct Dashboard: View {
-    @State private var searchText: String = ""
     @State var job: Job
-    @State var jobs: [Job] = [
-        Job(
-            id: UUID(),
-            title: "Math Tutoring",
-            description: "Help a high school student with algebra and geometry.",
-            price: 10,
-            status: "Available",
-            location: "Harare"
-        ),
-        Job(
-            id: UUID(),
-            title: "Garden Cleaning",
-            description: "Clear weeds and tidy a small backyard garden.",
-            price: 15,
-            status: "Available",
-            location: "Bulawayo"
-        ),
-        Job(
-            id: UUID(),
-            title: "Phone Setup Help",
-            description: "Assist with setting up email and apps on a smartphone.",
-            price: 8,
-            status: "Completed",
-            location: "Gweru"
-        )
-    ]
     
     var body: some View {
         NavigationStack {
