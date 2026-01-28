@@ -48,5 +48,6 @@ struct HustlePlacard: View {
 }
 
 #Preview {
-    HustlePlacard(hustle: Job(title: "Walk dog", description: "", price: 20, status:"Available", location: "Byo"))
+    HustlePlacard(hustle: Job(title: "Walk dog", description: "", category: Category(
+        image: Image(systemName: "figure.and.child.holdinghands"), title: "Children"), price: 20, status:"Available", location: "Byo"))
 }

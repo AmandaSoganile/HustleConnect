@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Tabs: View {
     var job: Job
-    var category: Category
+//    var category: Category
     
     var body: some View {
         TabView {
@@ -18,7 +18,7 @@ struct Tabs: View {
                             Label("Home", systemImage: "house.fill")
                         }
                     
-                    Categories(category: category)
+            Categories(category: job.category)
                         .tabItem {
                             Label("Categories", systemImage: "square.grid.2x2.fill")
                         }
@@ -32,8 +32,6 @@ struct Tabs: View {
 }
 
 #Preview {
-    Tabs(job: Job(title: "Walk dog", description: "", price: 20, status:"Available", location: "Byo"), category:  Category(
-        image: Image(systemName: "figure.and.child.holdinghands"),
-        title: "Children"
-    ))
+    Tabs(job: Job(title: "Walk dog", description: "", category: Category(
+        image: Image(systemName: "figure.and.child.holdinghands"), title: "Children"), price: 20, status: "", location: ""))
 }

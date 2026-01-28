@@ -80,5 +80,6 @@ struct Dashboard: View {
 }
 
 #Preview {
-    Dashboard(job: Job(title: "Walk dog", description: "", price: 20, status:"Available", location: "Byo"))
+    Dashboard(job: Job(title: "Walk dog", description: "", category: Category(
+        image: Image(systemName: "figure.and.child.holdinghands"), title: "Children"), price: 20, status:"Available", location: "Byo"))
 }
