@@ -20,7 +20,6 @@ struct Categories: View {
                 Text("Available Categories")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
-                    .padding(.bottom, 60)
                     .padding(.top, 50 )
             }
         
